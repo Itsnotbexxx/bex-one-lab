@@ -1,0 +1,6 @@
+framework module Pods_reminder_snapkit {
+  umbrella header "Pods-reminder-snapkit-umbrella.h"
+
+  export *
+  module * { export * }
+}
