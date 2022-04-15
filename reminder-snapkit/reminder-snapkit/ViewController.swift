@@ -136,7 +136,8 @@ class ViewController: UIViewController {
         control.setTitleTextAttributes(
             [NSAttributedString.Key.foregroundColor:UIColor.white],
             for: UIControl.State.selected)
-        control.setTitleTextAttributes([NSAttributedString.Key.foregroundColor:UIColor.systemBlue],
+        control.setTitleTextAttributes(
+            [NSAttributedString.Key.foregroundColor:UIColor.systemBlue],
                                        for: UIControl.State.normal)
         return control
     }()
