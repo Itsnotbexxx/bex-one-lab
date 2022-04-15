@@ -112,8 +112,11 @@ class ChangePasswordViewController: UIViewController {
         button.setTitle("Сохранить", for: .normal)
         button.setTitleColor(UIColor(red: 0.65, green: 0.65, blue: 0.65, alpha: 1), for: .normal)
         button.titleLabel?.font = UIFont(name: "Montserrat", size: 20)
+        button.sizeToFit()
         return button
     }()
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -122,9 +125,33 @@ class ChangePasswordViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedString.Key.font: UIFont(descriptor: UIFontDescriptor(name: "Montserrat", size: 16), size: 16)]
         passwordSetup()
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillShow),
+                                               name: UIResponder.keyboardWillShowNotification,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillHide),
+                                               name: UIResponder.keyboardWillHideNotification,
+                                               object: nil)
     }
 
+   @objc func keyboardWillShow(notification: NSNotification){
+        saveView.snp.remakeConstraints {
+            $0.left.equalToSuperview().inset(16)
+            $0.right.equalToSuperview().inset(15)
+            $0.bottom.equalToSuperview().inset(300)
+            $0.height.equalTo(50)
+        }
+    }
     
+    @objc func keyboardWillHide(notification: NSNotification){
+        saveView.snp.remakeConstraints {
+            $0.left.equalToSuperview().inset(16)
+            $0.right.equalToSuperview().inset(15)
+            $0.bottom.equalToSuperview().inset(100)
+            $0.height.equalTo(50)
+        }
+    }
     
     @objc func passwordView(_ sender: UIButton){
         (sender ).isSelected = !(sender ).isSelected
@@ -246,10 +273,11 @@ class ChangePasswordViewController: UIViewController {
         }
         
         saveView.addSubview(saveButton)
+        
         saveButton.snp.makeConstraints {
             $0.left.equalToSuperview().inset(40)
             $0.right.equalToSuperview().inset(40)
-            $0.top.equalToSuperview().inset(12)
+  
             $0.bottom.equalToSuperview().inset(12)
         }
     }
