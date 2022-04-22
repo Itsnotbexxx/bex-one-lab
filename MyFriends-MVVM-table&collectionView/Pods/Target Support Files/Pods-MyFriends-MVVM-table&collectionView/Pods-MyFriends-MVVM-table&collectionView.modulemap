@@ -1,0 +1,6 @@
+framework module Pods_MyFriends_MVVM_table_collectionView {
+  umbrella header "Pods-MyFriends-MVVM-table&collectionView-umbrella.h"
+
+  export *
+  module * { export * }
+}
