@@ -104,30 +104,30 @@
 				6D0340C5280B6B510032B916 /* Assets.xcassets */,
 				6D0340C7280B6B510032B916 /* LaunchScreen.storyboard */,
 				6D0340CA280B6B510032B916 /* Info.plist */,
-				6D0340DA280B70660032B916 /* Application */,
-				6D0340DD280B70C10032B916 /* Pages */,
+				6D9C93C5281303E70072C588 /* Localizable */,
+				6D0340DA280B70660032B916 /* Application Layer */,
+				6D0340DD280B70C10032B916 /* Presentation Layer */,
 			);
 			path = "MyFriends-MVVM-table&collectionView";
 			sourceTree = "<group>";
 		};
-		6D0340DA280B70660032B916 /* Application */ = {
+		6D0340DA280B70660032B916 /* Application Layer */ = {
 			isa = PBXGroup;
 			children = (
 				6D0340BC280B6B4B0032B916 /* AppDelegate.swift */,
 				6D0340BE280B6B4B0032B916 /* SceneDelegate.swift */,
 			);
-			path = Application;
+			path = "Application Layer";
 			sourceTree = "<group>";
 		};
-		6D0340DD280B70C10032B916 /* Pages */ = {
+		6D0340DD280B70C10032B916 /* Presentation Layer */ = {
 			isa = PBXGroup;
 			children = (
 				6DB9B078280C25AB00E34B8E /* MainPages */,
 				6D535B8328106A95007D7AF5 /* MyFriend */,
 				6DB9B079280C25B900E34B8E /* addNewFriends */,
-				6D9C93C5281303E70072C588 /* Localizable */,
 			);
-			path = Pages;
+			path = "Presentation Layer";
 			sourceTree = "<group>";
 		};
 		6D535B8328106A95007D7AF5 /* MyFriend */ = {
